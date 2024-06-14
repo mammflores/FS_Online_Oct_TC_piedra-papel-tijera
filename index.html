@@ -4,15 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    </style>    
   <title>Piedra, papel, tijera</title>
 </head>
 <body>
-  <button class="boton-jugada" data-jugada="piedra">Piedra</button>
-  <button class="boton-jugada" data-jugada="papel">Papel</button>
-  <button class="boton-jugada" data-jugada="tijera">Tijera</button>
-  <div id="resultados"></div>
-  <p id="contador-usuario">Tus puntos: 0</p>
-  <p id="contador-ordenador">Puntos de la máquina: 0</p>
+  <div id="pantalla">
+    <div id="botones">
+      <button id="piedra" class="boton-jugada-uno" data-jugada="piedra">Piedra</button>
+      <button id="papel" class="boton-jugada-dos" data-jugada="papel">Papel</button>
+      <button id="tijera" class="boton-jugada-tres" data-jugada="tijeras">Tijera</button>
+      </div>
+    
+      <div id="resultados"></div>
+      <p id="contador-usuario">Tus puntos: 0</p>
+      <p id="contador-ordenador">Puntos de la máquina: 0</p>
+  </div>
+
+ 
   <script src="./js/script.js"></script>
 </body>
 </html>

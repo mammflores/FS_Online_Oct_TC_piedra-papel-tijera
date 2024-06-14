@@ -38,17 +38,17 @@ function jugar(jugadaUsuario) {
     const jugadaPc = opciones[Math.floor(Math.random() * 3)];
     const resultado = resultados[jugadaUsuario][jugadaPc];
 
-    resultadosDiv.textContent = `Jugador: ${jugadaUsuario}, PC: ${jugadaPc}. Resultado: ${resultado}`;
+    resultadosDiv.textContent = "Jugador: " + jugadaUsuario + ", PC: " + jugadaPc + ". Resultado: " + resultado;
 
     if (resultado.includes("Ganaste")) {
         incrementarPuntos(contadorUsuario);
-    } else if (resultado.includes('Perdiste')) {
+    } else if (resultado.includes("Perdiste")) {
         incrementarPuntos(contadorOrdenador);
     }
 }
 
 function incrementarPuntos(contador) {
-    let puntos = parseInt(contador.textContent.split(': ')[1]);
+    let puntos = parseInt(contador.textContent.split(": ")[1]);
     puntos++;
-    contador.textContent = `Puntos: ${puntos}`;
+    contador.textContent = "Puntos: ${puntos}";
 }

@@ -8,30 +8,30 @@ funciones que hay que hacer:
 4. que ordenador seleccione jugada
 5. event listener botones */
 
-let piedra = document.getElementById('piedra');
-let papel = document.getElementById('papel');
-let tijera = document.getElementById('tijera');
-let resultadosDiv = document.getElementById('resultados');
-let contadorUsuario = document.getElementById('contador-usuario');
-let contadorOrdenador = document.getElementById('contador-ordenador');
+let piedra = document.getElementById("piedra");
+let papel = document.getElementById("papel");
+let tijera = document.getElementById("tijera");
+let resultadosDiv = document.getElementById("resultados");
+let contadorUsuario = document.getElementById("contador-usuario");
+let contadorOrdenador = document.getElementById("contador-ordenador");
 
-const opciones = ['piedra', 'papel', 'tijeras'];
+const opciones = ["piedra", "papel", "tijeras"];
 const resultados = {
-    'piedra': { 'piedra': '¡Empate!', 'papel': '¡Ganaste!', 'tijeras': '¡Perdiste!' },
-    'papel': { 'piedra': '¡Ganaste!', 'papel': '¡Empate!', 'tijeras': '¡Perdiste!' },
-    'tijeras': { 'piedra': '¡Perdiste!', 'papel': '¡Ganaste!', 'tijeras': '¡Empate!' }
+    "piedra": { "piedra": "¡Empate!", "papel": "¡Ganaste!", "tijeras": "¡Perdiste!" },
+    "papel": { "piedra": "¡Ganaste!", "papel": "¡Empate!", "tijeras": "¡Perdiste!" },
+    "tijeras": { "piedra": "¡Perdiste!", "papel": "¡Ganaste!", "tijeras": "¡Empate!" }
 };
 
-piedra.addEventListener('click', function() {
-    jugar('piedra');
+piedra.addEventListener("click", function() {
+    jugar("piedra");
 });
 
-papel.addEventListener('click', function() {
-    jugar('papel');
+papel.addEventListener("click", function() {
+    jugar("papel");
 });
 
-tijera.addEventListener('click', function() {
-    jugar('tijeras');
+tijera.addEventListener("click", function() {
+    jugar("tijeras");
 });
 
 function jugar(jugadaUsuario) {
@@ -40,7 +40,7 @@ function jugar(jugadaUsuario) {
 
     resultadosDiv.textContent = `Jugador: ${jugadaUsuario}, PC: ${jugadaPc}. Resultado: ${resultado}`;
 
-    if (resultado.includes('Ganaste')) {
+    if (resultado.includes("Ganaste")) {
         incrementarPuntos(contadorUsuario);
     } else if (resultado.includes('Perdiste')) {
         incrementarPuntos(contadorOrdenador);
